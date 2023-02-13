@@ -4,6 +4,7 @@ const Box1 = () => {
   return (
     <div className="box-one">
         <Box2/>
+
     </div>
   )
 }

@@ -14,8 +14,8 @@ const Mother = () => {
     <>
       <h1>A Tale Of Five Balloons</h1>
       <div className="balloons-container">
-        {kids.map((kid) => (
-          <div className="balloon-item">
+        {kids.map((kid,index) => (
+          <div key={index} className="balloon-item">
             <Child color={kid.color}>
               <h3>{kid.name}</h3>
             </Child>
