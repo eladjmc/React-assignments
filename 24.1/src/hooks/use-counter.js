@@ -13,7 +13,11 @@ export const useCounter = (initValue) => {
     setCounter(counter * 2);
   };
   const divide = () => {
-    setCounter(counter % 2 ?(counter / 2).toFixed(1) : (counter / 2));
+    if (counter < 0.11 && counter > -0.11) {
+      setCounter(0);
+      return;
+    }
+    setCounter(counter % 2 ? (counter / 2).toFixed(1) : counter / 2);
   };
 
   return { counter, add, sub, multiply, divide };
